@@ -21,7 +21,7 @@ def weight_data():
     freq_acum = cs.formato(cs.frecuencia_acumulada(peso), type='bar', is_text=False)
     
     mean, median, mode = cs.pack_med(peso, type='num')
-    return render_template('Consultas/peso.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
+    return render_template('consultas/peso.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
 
 @app.route('/altura')
 def height_data():
@@ -32,7 +32,7 @@ def height_data():
     freq_acum = cs.formato(cs.frecuencia_acumulada(altura), type='bar', is_text=False)
     
     mean, median, mode = cs.pack_med(altura, type='num')
-    return render_template('Consultas/altura.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
+    return render_template('consultas/altura.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
 
 @app.route('/velocidad')
 def velocity_data():
@@ -43,7 +43,7 @@ def velocity_data():
     freq_acum = cs.formato(cs.frecuencia_acumulada(velocidad), type='bar', is_text=False)
     
     mean, median, mode = cs.pack_med(velocidad, type='num')
-    return render_template('Consultas/velocidad.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
+    return render_template('consultas/velocidad.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
 
 @app.route('/color')
 def color_data():
@@ -54,7 +54,7 @@ def color_data():
     freq_acum = cs.formato(cs.frecuencia_acumulada(color), type='bar', is_text=True)
     
     mean, median, mode = cs.pack_med(color, type='str')
-    return render_template('Consultas/color.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
+    return render_template('consultas/color.html', freq_abs=freq_abs, freq_rel=freq_rel, freq_acum=freq_acum, mean=mean, median=median, mode=mode)
 
 
 if __name__ == '__main__':
