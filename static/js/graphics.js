@@ -49,12 +49,11 @@ function render_graph(data, element_id, graph_type, data_type, label_text) {
             
             new Morris.Donut({
                 element: element_id,
-                data: donutData,
+                data: data,
                 colors: ['#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'],
                 resize: true,
                 formatter: function (value) { return value + '%'; }
             });
-            break;
 
         case 'line':
             new Morris.Line({
