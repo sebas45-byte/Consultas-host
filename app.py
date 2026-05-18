@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 
 # importamos el archivo de consultas
-import Consultas as cs
+import consultas as cs
 
 #Aqui se denife como la aplicación principal
 app = Flask(__name__)
